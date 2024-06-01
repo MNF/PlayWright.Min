@@ -1,0 +1,24 @@
+name:  Kubenetes Build and Test
+
+on:
+  push:
+    branches:
+      - "**"
+      - "!main"
+
+env:
+  IMAGENAME: MyProgram-build
+
+jobs:
+  build:
+    runs-on: [ linux]
+    steps:
+      - name: Build and Test
+        uses: docker/build-push-action@v5
+        with:
+          dockerfile-path: "Dockerfile"
+          push: "false"
+          build-args: |
+            SKIP_UI_TESTS=true
+         
+          

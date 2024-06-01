@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Used in dockerfile. If you do any changes, consider to change other .runsettings as well-->
+<RunSettings>
+  <!--https://stackoverflow.com/questions/74372594/running-playwright-in-headed-mode-c-sharp-->
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <HEADED>0</HEADED>
+    </EnvironmentVariables>
+  </RunConfiguration>
+  <Playwright>
+    <BrowserName>chromium</BrowserName>
+    <LaunchOptions>
+      <Headless>true</Headless>
+      <!--https://stackoverflow.com/questions/77545318/error-browsertype-launch-chromium-distribution-chrome-is-not-found-at-opt-g  remove the channel-->
+      <!--<Channel>chrome</Channel>--> 
+      <SlowMo>500</SlowMo>
+    </LaunchOptions>
+  </Playwright>
+</RunSettings>

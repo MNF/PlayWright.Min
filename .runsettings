@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Used  locally. If you do any changes, consider to change other .runsettings as well-->
+<RunSettings>
+  <!--https://stackoverflow.com/questions/74372594/running-playwright-in-headed-mode-c-sharp-->
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <HEADED>1</HEADED>
+    </EnvironmentVariables>
+  </RunConfiguration>
+  <Playwright>
+    <BrowserName>chromium</BrowserName>
+    <LaunchOptions>
+      <Headless>false</Headless>
+      <Channel>chrome</Channel> <!--msedge https://playwright.dev/docs/browsers#run-tests-on-different-browsers-->
+      <SlowMo>500</SlowMo>
+    </LaunchOptions>
+  </Playwright>
+</RunSettings>
